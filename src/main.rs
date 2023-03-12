@@ -38,7 +38,7 @@ fn main() {
     let mut frames = match data {
         BitDepth::Eight(v) => { mx = std::u8::MAX as f64; get_lframe(&v, is_stereo) },
         BitDepth::Sixteen(v) => { mx = std::i16::MAX as f64; get_lframe(&v, is_stereo) },
-        BitDepth::ThirtyTwoFloat(v) => { mx = std::f64::MAX as f64; get_lframe(&v, is_stereo) },
+        BitDepth::ThirtyTwoFloat(v) => { mx = std::f32::MAX as f64; get_lframe(&v, is_stereo) },
         BitDepth::TwentyFour(v) => { mx = std::i32::MAX as f64; get_lframe(&v, is_stereo) },
         BitDepth::Empty => panic!("faild to load frames"),
     };  
